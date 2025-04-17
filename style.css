@@ -1,22 +1,33 @@
 /* style.css */
 body {
     font-family: "Garamond";
-    letter-spacing: 0,5px;
+    letter-spacing: 0.5px; /* Corregido de 0,5px a 0.5px */
     margin: 0;
     padding: 0;
 
-    background-image: url('https://imgs.search.brave.com/ywK3H_U2UuViRWXKtML-X_6KRcOKt5Hh--8xQbp0NGo/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzL2QxL2I5/LzA3L2QxYjkwN2E5/NjVhMzJhN2EzMDAz/MDQzZDUwNzI1NWQx/LmpwZw');
+    background-image: url('https://img.freepik.com/fotos-premium/fondos-pantalla-planeta-universo_826801-3305.jpg');
     background-size: cover;
     background-position: center;   
 
-    background-color: lightblue;
+    background-color: rgb(21, 112, 143);
+}
 
+
+body::before {
+      content:'';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0,8);
+      z-index:-1;
 }
 
 
 header {
-    background-color: #333;
-    color: #fff;
+    background-color: #c5bdbd; /* Seleccioné el color de la rama 'main' */
+    color: #000000;
     padding: 10px 0;
     text-align: center;
 }
@@ -46,11 +57,80 @@ main {
 }
 
 footer {
-    background-color: #333;
-    color: #fff;
+    background-color: #ff0000;
+    color: #000000;
     text-align: center;
-    padding: 10px 0;
+    padding: 12px 0;
     position: fixed;
-    width: 100%;
+    width: 90%;
     bottom: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #4A90E2;
+   }
+
+h1:hover {
+    color: red;
+    font-size: 2.5em;
+    transition: 2s;
+}
+
+a:hover {
+    color: #800080;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* he añadido un efecto hover para los enlaces del menú */
+nav ul li a:hover {
+    color: #ff6600;
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+#servicios {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.servicio {
+    text-align: center;
+}
+
+.servicio i {
+    font-size: 40px;
+    color: #4A90E2;
+}
+
+.servicio h3 {
+    margin-top: 10px;
+    font-size: 24px;
+}
+
+.servicio p {
+    font-size: 16px;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer ul li {
+    display: inline;
+}
+
+footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+@media (max-width: 600px) {
+    footer ul {
+        flex-direction: column;
+        align-items: center;
+    }
 }
